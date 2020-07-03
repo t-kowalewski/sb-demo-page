@@ -1,0 +1,22 @@
+{
+  "name": "sb-demo-website",
+  "version": "1.0.0",
+  "description": "Demo Website for small business",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-kowalewski/sb-demo-page.git"
+  },
+  "author": "Tony Kowalewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t-kowalewski/sb-demo-page/issues"
+  },
+  "homepage": "https://github.com/t-kowalewski/sb-demo-page#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
