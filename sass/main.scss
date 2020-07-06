@@ -6,8 +6,10 @@ $dark-green: #28b485;
 
 $grey-dark: #777;
 $white: #fff;
+$black: #000;
 
-/* ==== Universal styles & Reset ==== */
+
+// ==== Universal styles & Reset
 
 *,
 *::after,
@@ -17,15 +19,13 @@ $white: #fff;
   box-sizing: inherit;
 }
 
-/* == Root font size == */
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // we set root font size
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  /* font-size: 16px; */
   line-height: 1.7;
   color: $grey-dark;
   padding: 3rem;
@@ -34,7 +34,7 @@ body {
 }
 
 
-/* ==== Header ====*/
+// ==== Header
 .header {
   position: relative;
   height: 90vh;
@@ -46,58 +46,62 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+
+
+  // Nesting stuff inside header
+  &__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+  
+  &__title-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    // background: red;
+  }
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.header__logo {
-  height: 3.5rem;
-}
-
-.header__title-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /* background: red; */
-}
 
 .heading-primary {
   color: $white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
+
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    margin-right: -3.3rem;
+  
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+  
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.35rem;
+    margin-right: -1.35rem;
+  
+    animation: moveInRight 1.5s ease-out;
+  }
 }
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  margin-right: -3.3rem;
 
-  animation-name: moveInLeft;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.35rem;
-  margin-right: -1.35rem;
-
-  animation: moveInRight 1.5s ease-out;
-}
-
-
-/* ==== Animations ==== */
+// ==== Animations
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -143,57 +147,61 @@ body {
 }
 
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.6rem;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    font-size: 1.6rem;
+    
+    transition: all .2s;
+  }
+  
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($black, 0.2);
 
-.btn:hover {
-  transform: translateY(-.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  
+  &:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($black, 0.2);
+  }
+  
+  &--white {
+    background-color: $white;
+    color: $grey-dark;
 
-.btn:active {
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
-}
+    &::after {
+      background-color: $white;
+    }
+  }
 
-.btn--white {
-  background-color: $white;
-  color: $grey-dark;
-}
-
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: $white;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBottom .8s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  &--animated {
+    animation: moveInBottom .8s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+  
+  // Adding 'after' pseudo-element - hover effect around btn
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  
+    transition: all .4s;
+  }
 }
