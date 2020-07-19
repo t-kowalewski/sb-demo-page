@@ -11,5 +11,16 @@
     rgba($light-green, 0.8),
     rgba($dark-green, 0.8)),
     url('../img/nat-4.webp');
-    background-size: cover;
+  background-size: cover;
+  margin-top: -5.5%;
+
+  transform: skewY(-6deg);
+
+  & .row {
+    transform: skewY(6deg);
+  }
+    // Direct Child selector - Alternative
+    // & > * {
+    //   transform: skewY(6deg);
+    // }
 }
