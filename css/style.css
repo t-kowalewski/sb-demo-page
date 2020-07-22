@@ -167,6 +167,10 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
 
+.card {
+  background-color: orangered;
+  height: 50rem; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -262,3 +266,8 @@ body {
   transform: skewY(-6deg); }
   .section-features .row {
     transform: skewY(6deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem;
+  margin-top: -5.5%; }
