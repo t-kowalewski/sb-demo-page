@@ -1,11 +1,12 @@
 .card {
+  // General Card Styles / Functionality
   perspective: 150rem; //makes '3d' effect while rotating
   position: relative;
   height: 50rem;
   
   &__side {
     height: 50rem;
-    color: white;
+    color: $black;
     position: absolute;
     top: 0;
     left: 0;
@@ -39,5 +40,16 @@
 
   &:hover &__side--back {
     transform: rotateY(0deg);
+  }
+
+
+  // Front Side Styles
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+
+    &--1 {
+      background-image: url(../img/nat-5.webp);
+    }
   }
 }
