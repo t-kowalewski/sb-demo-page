@@ -216,7 +216,7 @@ body {
     .card__heading-span--1 {
       background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
   .card__details {
-    margin-top: 3rem; }
+    padding: 2.8rem; }
     .card__details ul {
       list-style: none;
       width: 80%;
