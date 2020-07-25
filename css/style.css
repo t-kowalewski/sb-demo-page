@@ -170,9 +170,9 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
-    height: 50rem;
+    height: 52rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -215,6 +215,18 @@ body {
     box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+  .card__details {
+    margin-top: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.5rem; }
+      .card__details ul li {
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: solid 1px #eee; }
 
 .composition {
   position: relative; }

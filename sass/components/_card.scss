@@ -2,10 +2,10 @@
   // General Card Styles / Functionality
   perspective: 150rem; //makes '3d' effect while rotating
   position: relative;
-  height: 50rem;
+  height: 52rem;
   
   &__side {
-    height: 50rem;
+    height: 52rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +72,7 @@
     width: 75%;
   }
 
-  
+
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
@@ -84,6 +84,27 @@
         rgba($color-secondary-light, .8),
         rgba($color-secondary-dark, .8)
       );
+    }
+  }
+
+
+  &__details {
+    margin-top: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.5rem;
+
+      li {
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: solid 1px $light-grey-2;
+        }
+      }
     }
   }
 }
