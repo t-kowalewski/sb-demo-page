@@ -126,16 +126,6 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
-
-.btn--animated {
-  animation: moveInBottom .8s ease-out 0.75s;
-  animation-fill-mode: backwards; }
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -147,6 +137,16 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn--animated {
+  animation: moveInBottom .8s ease-out 0.75s;
+  animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;

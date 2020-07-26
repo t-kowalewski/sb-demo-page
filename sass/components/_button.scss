@@ -1,4 +1,4 @@
-// Header Btn
+// Main Button / Header
 .btn {
   &:link,
   &:visited {
@@ -28,20 +28,6 @@
     box-shadow: 0 .5rem 1rem rgba($black, 0.2);
   }
   
-  &--white {
-    background-color: $white;
-    color: $grey-dark;
-
-    &::after {
-      background-color: $white;
-    }
-  }
-
-  &--animated {
-    animation: moveInBottom .8s ease-out 0.75s;
-    animation-fill-mode: backwards;
-  }
-  
   // Adding 'after' pseudo-element - hover effect around btn
   &::after {
     content: "";
@@ -56,8 +42,24 @@
   
     transition: all .4s;
   }
+
+  &--white {
+    background-color: $white;
+    color: $grey-dark;
+
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom .8s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }
 
+
+// Secondary Button
 .btn-text {
   &:link,
   &:visited {
