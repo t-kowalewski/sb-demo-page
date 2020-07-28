@@ -1,0 +1,27 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1rem 3rem rgba($black, .1);
+  background-color: $white;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem; //we compensate padding for translated floating element (6+3rem)
+  transform: skewX(-11deg);
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50% ); //radius of the circle(size, 50% -> half the size of the width & height of the element) + position of the circle, its center (x & y)
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(11deg); //when dealing with floated element - better to move it using transform, not margin
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__text {
+    transform: skewX(11deg);
+  }
+}

@@ -306,6 +306,27 @@ body {
   .feature-box:hover {
     transform: translateY(-1rem) scale(1.03); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  transform: skewX(-11deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(11deg); }
+  .story__img {
+    height: 100%; }
+  .story__text {
+    transform: skewX(11deg); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -365,3 +386,8 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem;
   margin-top: -5.5%; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7;
+  border-top: solid red 1px; }
