@@ -423,3 +423,17 @@ body {
 .section-stories {
   position: relative;
   padding: 15rem 0; }
+
+.section-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485); }
+  .section-booking .booking {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.webp);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 50rem; }
+    .section-booking .booking__form {
+      width: 50%;
+      padding: 6rem; }
