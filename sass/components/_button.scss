@@ -1,5 +1,6 @@
 // Main Button / Header
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -11,6 +12,10 @@
     font-size: $default-font-size;
     
     transition: all .2s;
+
+    // Change for the <button> elemtnt
+    border: none;
+    cursor: pointer;
   }
   
   &:hover {
@@ -23,7 +28,9 @@
     }
   }
   
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba($black, 0.2);
   }

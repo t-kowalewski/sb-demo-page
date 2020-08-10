@@ -2,9 +2,15 @@
 
   &__group {
     &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    &:nth-child(4) {
+      display: flex;
       margin-bottom: 4rem;
     }
   }
+
 
   &__input {
     font-size: 1.5rem;
@@ -40,6 +46,7 @@
     }
   }
 
+
   &__label {
     font-size: 1.2rem;
     font-weight: 700;
@@ -48,5 +55,45 @@
     display: inline-block;
 
     transition: all .3s;
+  }
+
+
+  // Radio Buttons
+  &__radio-group {
+    width: 50%;
+  }
+
+  &__radio-input {
+    display: none;
+
+    // Custom radio button when checked - dot in the middle
+    &:checked + .form__radio-label::before {
+      background-color: $primary-green;
+    }
+  }
+
+  &__radio-label {
+    position: relative;
+    font-size: $default-font-size;
+    cursor: pointer;
+    padding-left: 4rem;
+
+    // We add & style custom radio button
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 3rem;
+      width: 3rem;
+      border: 5px solid $primary-green;
+      border-radius: 50%;
+      position: absolute;
+      top: -0.75rem;
+      left: 0;
+      background-color: transparent;
+      padding: .4rem;
+      background-clip: content-box;
+
+      transition: background-color .2s;
+    }
   }
 }
