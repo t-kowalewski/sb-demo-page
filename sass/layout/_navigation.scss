@@ -1,0 +1,45 @@
+.navigation {
+
+  &__checkbox {
+
+  }
+
+  &__label {
+    background-color: $white;
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2;
+  }
+
+  &__background {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-image: radial-gradient($light-green, $dark-green);
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 1;
+  }
+
+  &__nav-element {
+
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+  }
+}
