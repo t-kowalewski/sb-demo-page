@@ -522,7 +522,8 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
-  z-index: 3; }
+  z-index: 3;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1); }
 
 .navigation__background {
   width: 6rem;
@@ -533,7 +534,8 @@ body {
   top: 6.5rem;
   right: 6.5rem;
   z-index: 1;
-  transform: scale(143); }
+  will-change: transform;
+  transition: transform .9s ease-out; }
 
 .navigation__nav-element {
   height: 100vh;
@@ -541,7 +543,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2; }
+  z-index: 2;
+  transform: translateX(-100%);
+  opacity: 0.001;
+  transition: all .5s; }
 
 .navigation__list {
   list-style: none;
@@ -569,6 +574,13 @@ body {
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #55c57a; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(143); }
+
+.navigation__checkbox:checked ~ .navigation__nav-element {
+  transform: translateX(0);
+  opacity: 1; }
 
 .section-about {
   background-color: #f7f7f7;
