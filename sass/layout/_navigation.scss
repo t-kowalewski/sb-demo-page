@@ -16,6 +16,36 @@
     right: 6rem;
     z-index: 3;
     box-shadow: 0 .5rem 2rem rgba($black, .1);
+    cursor: pointer;
+  }
+
+  // Menu Button - Icon
+  &__icon {
+    @include center-element-hv;
+
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      width: 3rem;
+      height: 2px;
+      background-color: $grey-dark-2;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -.8rem;
+    }
+    &::after {
+      top: .8rem;
+    }
   }
 
   // Menu Background
@@ -97,5 +127,26 @@
   &__checkbox:checked ~ &__nav-element {
     transform: translateX(0);
     opacity: 1;
+  }
+
+
+  &__label:hover &__icon::before {
+    top: -1rem;
+  }
+  &__label:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__label > &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__label > &__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+  &__checkbox:checked + &__label > &__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
   }
 }
