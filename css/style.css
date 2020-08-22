@@ -410,9 +410,9 @@ body {
     border-radius: 3px;
     overflow: hidden; }
     .popup__card-left-side {
-      width: 33%; }
+      width: 36%; }
     .popup__card-right-side {
-      width: 67%;
+      width: 64%;
       padding: 3rem 5rem; }
   .popup__img {
     display: block;
