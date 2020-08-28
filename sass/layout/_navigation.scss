@@ -17,6 +17,11 @@
     z-index: 3;
     box-shadow: 0 .5rem 2rem rgba($black, .1);
     cursor: pointer;
+
+    @include respond(tab_port) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
 
   // Menu Button - Icon
@@ -61,6 +66,11 @@
 
     will-change: transform; // for chromium scale() performance
     transition: transform 1s cubic-bezier(0.83, 0, 0.17, 1);
+
+    @include respond(tab_port) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   // Nav element & list
@@ -80,6 +90,7 @@
   &__list {
     list-style: none;
     text-align: center;
+    width: 80%;
     @include center-element-hv;
   }
 

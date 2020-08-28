@@ -1,4 +1,6 @@
-// Custom Grid - Flex
+// Custom Grid - Flex (based on _variables.scss)
+
+// ==== ROW ====
 .row {
   max-width: $grid-width;
   margin: 0 auto;
@@ -6,10 +8,35 @@
   
   &:not(:last-child) {
     margin-bottom: $grid-vertical-gap;
+
+    @include respond(tab_port) {
+      margin-bottom: $grid-vertical-gap-small;
+    }
   }
 
+  @include respond(tab_land) {
+    padding: 0 1rem;
+    justify-content: space-around; //flex, bec. we have smaller hor-gap for column in tab_land -> column width based on calc is same but new gap is smaller & they don't take 100% row width
+  }
+
+  @include respond(tab_port) {
+    max-width: $grid-width-small;
+    flex-direction: column;
+    padding: 0 3rem;
+  }
+
+  // ==== COLUMNS ====
   [class^='col-']:not(:last-child) {
-      margin-right: $grid-horizontal-gap;
+    margin-right: $grid-horizontal-gap;
+
+    @include respond(tab_land) {
+      margin-right: $grid-horizontal-gap-small;
+    }
+
+    @include respond(tab_port) {
+      margin-right: 0;
+      margin-bottom: $grid-vertical-gap-small;
+    }
   }
 
   .col-1-of-2 {
@@ -34,5 +61,12 @@
 
   .col-3-of-4 {
     width: calc(((100% - (#{$grid-horizontal-gap} * 3 ))/4) * 3 + (#{$grid-horizontal-gap}*2));
+  }
+
+  // Column width for small screens - 100%
+  [class^='col-'] {
+    @include respond(tab_port) {
+      width: 100%;
+    }
   }
 }

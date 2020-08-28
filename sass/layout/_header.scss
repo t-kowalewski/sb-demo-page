@@ -11,6 +11,13 @@
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 
+  @include respond(tab_land) {
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+
 
   // Nesting stuff inside header
   &__logo-box{

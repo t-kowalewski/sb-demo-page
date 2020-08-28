@@ -525,6 +525,9 @@ body {
   padding: 10rem 0 15rem;
   font-size: 1.4rem;
   color: #f7f7f7; }
+  @media (max-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 6rem; }
@@ -535,6 +538,10 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__nav-list {
     list-style: none; }
   .footer__nav-item {
@@ -558,6 +565,11 @@ body {
     width: 82%;
     position: relative;
     left: 18%; }
+    @media (max-width: 56.25em) {
+      .footer__copyright {
+        position: static;
+        text-align: center;
+        width: 100%; } }
 
 .row {
   max-width: 114rem;
@@ -565,8 +577,27 @@ body {
   display: flex; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 75em) {
+    .row {
+      padding: 0 1rem;
+      justify-content: space-around; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      flex-direction: column;
+      padding: 0 3rem; } }
   .row [class^='col-']:not(:last-child) {
     margin-right: 6rem; }
+    @media (max-width: 75em) {
+      .row [class^='col-']:not(:last-child) {
+        margin-right: 3rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^='col-']:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 6rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem)/2); }
   .row .col-1-of-3 {
@@ -579,6 +610,9 @@ body {
     width: calc(((100% - (6rem * 3 ))/4) * 2 + 6rem); }
   .row .col-3-of-4 {
     width: calc(((100% - (6rem * 3 ))/4) * 3 + (6rem*2)); }
+  @media (max-width: 56.25em) {
+    .row [class^='col-'] {
+      width: 100%; } }
 
 .header {
   position: relative;
@@ -587,6 +621,12 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%); }
+  @media (max-width: 75em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -615,6 +655,10 @@ body {
   z-index: 3;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
   cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__label {
+      top: 2.5rem;
+      right: 2.5rem; } }
 
 .navigation__icon {
   position: absolute;
@@ -647,6 +691,10 @@ body {
   z-index: 1;
   will-change: transform;
   transition: transform 1s cubic-bezier(0.83, 0, 0.17, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__nav-element {
   height: 100vh;
@@ -662,6 +710,7 @@ body {
 .navigation__list {
   list-style: none;
   text-align: center;
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
