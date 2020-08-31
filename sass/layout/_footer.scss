@@ -22,10 +22,17 @@
     border-top: 1px solid $grey-dark;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(tab_land) {
+      width: 85%;
+      position: absolute;
+      left: 0;
+      text-align: center;
+    }
     
     @include respond(tab_port) {
+      position: static;
       width: 100%;
-      text-align: center;
     }
   }
 
@@ -68,6 +75,13 @@
     width: 82%;
     position: relative;
     left: 18%;
+
+    @include respond(tab_land) {
+      width: 85%;
+      position: absolute;
+      right: 0;
+      left: auto;
+    }
 
     @include respond(tab_port) {
       position: static;
