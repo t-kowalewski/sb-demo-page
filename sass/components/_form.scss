@@ -8,9 +8,25 @@
     &:nth-child(4) {
       display: flex;
       margin-bottom: 4rem;
+
+      @include respond(tab_port) {
+        flex-direction: column;
+      }
     }
   }
 
+  // Center Heading & button for mobile view
+  @include respond(tab_port) {
+    h2 {
+      display: block;
+      text-align: center;
+    }
+
+    .form__group:last-child {
+      text-align: center;
+    }
+  }
+  /////////////////////////////////////////
 
   &__input {
     font-size: 1.5rem;
@@ -25,6 +41,10 @@
     display: block;
 
     transition: all .2s;
+
+    @include respond(tab_port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -61,6 +81,15 @@
   // Radio Buttons
   &__radio-group {
     width: 50%;
+
+    @include respond(tab_port) {
+      &:not(:last-child){
+        margin-bottom: 2rem;
+      }
+
+      width: 95%;
+      text-align: center;
+    }
   }
 
   &__radio-input {
