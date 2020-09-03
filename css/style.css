@@ -558,6 +558,14 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   transform: skewX(-11deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -566,6 +574,9 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(11deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0); } }
   .story__img {
     height: 100%;
     transform: translateX(-17%) scale(1.4);
@@ -583,6 +594,9 @@ body {
     transition: all .5s; }
   .story__text {
     transform: skewX(11deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story:hover .story__caption {
     transform: translate(-50%, -50%);
     opacity: 1; }
