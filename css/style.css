@@ -560,9 +560,14 @@ body {
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        width: 50%; } }
     @media (max-width: 37.5em) {
-      .popup__img:first-child {
-        display: none; } }
+      .popup__img {
+        width: 100%; }
+        .popup__img:first-child {
+          display: none; } }
   .popup__text {
     font-size: 1.4rem;
     column-count: 2;
