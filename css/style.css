@@ -925,7 +925,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.webp");
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4-small.webp");
   background-size: cover;
   margin-top: -5.5%;
   transform: skewY(-6deg); }
@@ -934,6 +934,9 @@ body {
   @media (max-width: 56.25em) {
     .section-features {
       padding: 12rem 0; } }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .section-features {
+      background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.webp"); } }
 
 .section-tours {
   background-color: #f7f7f7;
