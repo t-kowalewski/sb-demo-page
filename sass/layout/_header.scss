@@ -6,10 +6,20 @@
     to bottom right,
     rgba($light-green, 0.8),
     rgba($dark-green, 0.8)),
-    url('../img/hero.webp');
+    url('../img/hero-small.webp');
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+
+  // Media for img loaded via CSS -> "," means "OR" - we have 2 conditions
+  // em values => 600px/16 = 37.5 em; 2000px/16 = 125 em
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+      to bottom right,
+      rgba($light-green, 0.8),
+      rgba($dark-green, 0.8)),
+      url('../img/hero.webp');
+  }
 
   @include respond(tab_land) {
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);

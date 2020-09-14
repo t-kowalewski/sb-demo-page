@@ -24,6 +24,7 @@
 // Order: Base + typography > layout + grid > pages > components
 
 // 1em = 16px
+// (em & rem in @media - affected ONLY by browser font size)
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
