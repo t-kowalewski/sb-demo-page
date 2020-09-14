@@ -840,7 +840,8 @@ body {
   @media (max-width: 56.25em) {
     .navigation__background {
       top: 3rem;
-      right: 3rem; } }
+      right: 3rem;
+      will-change: auto; } }
 
 .navigation__nav-element {
   height: 100vh;
@@ -883,6 +884,12 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(143); }
+  @media (max-width: 56.25em) {
+    .navigation__checkbox:checked ~ .navigation__background {
+      transform: scale(46); } }
+  @media (max-width: 37.5em) {
+    .navigation__checkbox:checked ~ .navigation__background {
+      transform: scale(37); } }
 
 .navigation__checkbox:checked ~ .navigation__nav-element {
   transform: translateX(0);

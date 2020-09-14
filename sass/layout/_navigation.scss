@@ -70,6 +70,8 @@
     @include respond(tab_port) {
       top: 3rem;
       right: 3rem;
+
+      will-change: auto;
     }
   }
 
@@ -133,6 +135,14 @@
   // Menu Button - Click Functionality (Checkbox Hack)
   &__checkbox:checked ~ &__background {
     transform: scale(143);
+
+    @include respond(tab_port) {
+      transform: scale(46);
+    }
+
+    @include respond(phone) {
+      transform: scale(37);
+    }
   }
 
   &__checkbox:checked ~ &__nav-element {
