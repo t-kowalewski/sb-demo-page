@@ -64,6 +64,7 @@
 
   @include respond(tab_port) {
     padding: 10rem 0;
+    background-color: $light-grey-2; // bg video disabled
   }
 }
 
