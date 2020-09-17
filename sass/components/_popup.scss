@@ -10,6 +10,12 @@
   visibility: hidden;
 
   transition: all .3s;
+
+  // Testing if browser supports new feature (property)
+  @supports (backdrop-filter: blur(10px)) {
+    backdrop-filter: blur(10px);
+    background-color: rgba($black, 0.3);
+  }
   
   &__card {
     @include center-element-hv;

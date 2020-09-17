@@ -245,6 +245,7 @@ body {
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all .8s ease; }
     .card__side--front {
@@ -532,6 +533,10 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
+  @supports (backdrop-filter: blur(10px)) {
+    .popup {
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
   .popup__card {
     position: absolute;
     top: 50%;
@@ -779,7 +784,7 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%); }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
     .header {
       background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.webp"); } }
   @media (max-width: 75em) {
