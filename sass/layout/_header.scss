@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+  overflow: hidden;
 
   // Media for img loaded via CSS -> "," means "OR" - we have 2 conditions
   // em values => 600px/16 = 37.5 em; 2000px/16 = 125 em
@@ -48,6 +49,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    // background: red;
   }
 }
