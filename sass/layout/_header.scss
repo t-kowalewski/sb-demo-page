@@ -13,9 +13,9 @@
 
   // Media for img loaded via CSS -> "," means "OR" - we have 2 conditions
   // em values => 600px/16 = 37.5 em; 2000px/16 = 125 em
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-        (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), // Safari doesn't support 'resolution' media
-        (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), // Safari doesn't support 'resolution' media
+        only screen and (min-width: 125em) {
           background-image: linear-gradient(
           to bottom right,
           rgba($light-green, 0.8),
